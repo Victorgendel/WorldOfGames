@@ -5,7 +5,11 @@ def Random_Game(x):
     random =random.randint(1,x)
     count = 10
     while count != 0:
-        num = int(input("Enter a number: "))
+        try:
+         num = int(input("Enter a number: "))
+        except ValueError:
+            print("Thats not an int")
+            continue
         if num == random:
             print(f"you Right!! the number was : {num}\n▉▉▉▉▉◤┳┻┳◥▉▉▉▉▉\n▉▉▉▉◤┳┻┳┻┳◥▉▉▉▉\n▉▉▉◤┳━┳━┳━┳◥▉▉▉\n▉▉◤┳┃┈( ͡° ͜ʖ ͡°)┈┃┳◥▉▉\n▉◤┳┻╰━━━━━╯┻┳◥▉\n◤┳┻┳┻┳┻┳┻┳┻┳┻┳◥ ")
 
