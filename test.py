@@ -14,7 +14,7 @@
 # # print(f"actual is: {actual}")
 # # assert expected == actual
 # # sleep(10)
-#
+
 # driver2 = webdriver.Chrome()
 # driver2.get("https://he.aliexpress.com/")
 # login = driver2.find_element("xpath","//*[@id=\"home-firstscreen\"]/div/div/div[4]/div/div/div[2]/div/span[2]").click()

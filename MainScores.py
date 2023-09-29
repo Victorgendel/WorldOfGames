@@ -4,7 +4,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     try:
-        f = open('score.txt', 'r')
+        f = open('Scores.txt', 'r')
         g = f.read()
     except:
         return open("Errorhtml.html")
