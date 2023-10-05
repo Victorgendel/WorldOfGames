@@ -1,6 +1,16 @@
 version: '3.8'
+
 services:
-  flask_app:
-    image:
-      ports:
-        5000:5000
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: victorgendel/flaskapp:v1
+    container_name: my-flask-application
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_RUN_HOST=0.0.0.0
+    command: ["python3", "Main_Game.py"]
+    restart: always
