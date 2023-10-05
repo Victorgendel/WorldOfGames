@@ -11,8 +11,9 @@ def test_scores_service():
     driver1 = webdriver.Chrome()
     driver1.get("http://127.0.0.1:5000/")
     sleep(5)
-    login = driver1.find_element("xpath","//*[@id=\"score\"]").text
-    if 1 < int(login) < 1000:
+    login = driver1.find_element("xpath","/html/body/table/tbody/tr[2]/td[2]").text
+    print(login)
+    if 1 <= int(login) < 1000:
         return True
     else:
         return False

@@ -1,8 +1,23 @@
+
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Scores Game</title>
-    </head>
-    <body>
-        <h1>The score is <div id="score">{{n}}</div></h1>
-    </body>
-    </html>
+<head>
+    <title>WorldOfGames Score Board</title>
+</head>
+<body>
+    <h1>Welcome to WorldOfGames Score Board</h1>
+    <h2>Your Scores:</h2>
+    <table id="table1" border="1">
+        <tr>
+            <th>Player Name</th>
+            <th>Score</th>
+        </tr>
+        {% for player, score in n.items() %}
+        <tr>
+            <td>{{ player }}</td>
+            <td>{{ score }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

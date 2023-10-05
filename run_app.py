@@ -1,7 +1,5 @@
 import subprocess
 import platform
-import signal
-import os
 
 flask_process = None  # Initialize a variable to store the Flask process
 
@@ -9,7 +7,7 @@ def start_flask_server():
     global flask_process  # Use the global variable
 
     system = platform.system()
-    script_name = "MainScores.py"  # Replace with the correct script name if needed
+    script_name = "app.py"  # Replace with the correct script name if needed
 
     try:
         if system == "Linux":
@@ -39,15 +37,16 @@ def stop_flask_server():
             print(f"Error stopping Flask app: {e}")
 
 if __name__ == "__main__":
-    if flask_process:
-        print("Flask app started in the background.")
-        #
-        # try:
-        #     input("Press Enter to stop the Flask app...")
-        # except KeyboardInterrupt:
-        #     pass
-        #
-        # stop_flask_server()
-        # print("Flask app stopped.")
-    else:
-        print("Flask app was not started due to errors.")
+    # if flask_process:
+    #     print("Flask app started in the background.")
+
+        try:
+            input("Press Enter to stop the Flask app...")
+        except KeyboardInterrupt:
+            pass
+
+        stop_flask_server()
+        print("Flask app stopped.")
+    # else:
+    #     print("Flask app was not started due to errors.")
+#
