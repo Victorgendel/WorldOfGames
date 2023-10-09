@@ -19,4 +19,4 @@ ENV FLASK_APP app.py
 ENV FLASK_RUN_HOST 0.0.0.0
 
 # Command to run the Flask application
-CMD ["python", "Main_Game.py"]
+CMD ["python3", "Main_Game.py"]
