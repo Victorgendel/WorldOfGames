@@ -25,4 +25,4 @@ def main_function():
         print("Tests failed.")
         return sys.exit(-1)
 
-print(main_function())
+
