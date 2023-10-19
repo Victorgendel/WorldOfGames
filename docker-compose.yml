@@ -12,5 +12,7 @@ services:
     environment:
       - FLASK_APP=app.py
       - FLASK_RUN_HOST=0.0.0.0
+    volumes:
+      - ./Scores:/app/Scores
     command: ["python3", "Main_Game.py"]
     restart: always

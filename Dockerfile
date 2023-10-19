@@ -17,6 +17,6 @@ EXPOSE 5000
 
 ENV FLASK_APP app.py
 ENV FLASK_RUN_HOST 0.0.0.0
-
+RUN mkdir -p /app/Scores
 # Command to run the Flask application
 CMD ["python3", "Main_Game.py"]
