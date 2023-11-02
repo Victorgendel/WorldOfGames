@@ -11,7 +11,7 @@ from run_app import start_flask_server
 
 def welcome(name):
     name = (input(f"Enter your name: "))
-    print(f"hello  {name} and welcome to the game of (WoG)\nhere you can find many cool games to play: ")
+    print(f"hello  {name} and welcome to the game of (WoG)\nhere you can find many cool games to play: \n too see the score: http://localhost:5000/ ")
 
     return name
 

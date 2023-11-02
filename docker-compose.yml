@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: victorgendel/flaskapp:v1
+    image: victorgendel/flaskapp:v1.1
     container_name: my-flask-application
     ports:
       - "5000:5000"
@@ -16,3 +16,12 @@ services:
       - ./Scores:/app/Scores
     command: ["python3", "Main_Game.py"]
     restart: always
+
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1q2w3e!@QWAS
+      MYSQL_DATABASE: games
+    ports:
+      - "3306:3306"
